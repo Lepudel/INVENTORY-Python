@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='cart.js') }}" defer></script>
+    <title>Корзина</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Корзина</h1>
+        <div id="cart-items">
+            <!-- Товары из корзины будут заполняться динамически -->
+        </div>
+        <div class="cart-controls">
+            <textarea id="project-name" placeholder="Введите название проекта"></textarea>
+            <input type="date" id="delivery-date" placeholder="Дата отгрузки">
+            <input type="date" id="return-date" placeholder="Дата возврата">
+            <button id="generate-pdf">Сгенерировать PDF</button>
+        </div>
+    </div>
+</body>
+</html>

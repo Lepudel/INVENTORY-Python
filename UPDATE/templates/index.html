@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Складское приложение</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Левое меню с категориями -->
+        <aside class="categories">
+            <ul>
+                <!-- Категории будут заполняться динамически -->
+            </ul>
+        </aside>
+
+        <!-- Основная часть с поиском и карточками товаров -->
+        <main>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск товаров..." id="search-input">
+            </div>
+            <div class="product-grid">
+                <!-- Карточки товаров будут динамически добавляться -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>
