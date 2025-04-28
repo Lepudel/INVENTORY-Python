@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 
@@ -13,6 +13,11 @@ RANGE = 'Sheet1!A2:H'
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 credentials = Credentials.from_service_account_file('google_credentials.json', scopes=SCOPES)
 service = build('sheets', 'v4', credentials=credentials)
+
+# Эндпоинт для корневого URL
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 # Эндпоинт для получения данных из Google Sheets
 @app.route('/products', methods=['GET'])
